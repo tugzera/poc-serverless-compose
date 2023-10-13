@@ -1,6 +1,13 @@
 services:
+  main:
+    path: main
+  
   service-one:
     path: service-one
+    dependsOn:
+      - main
 
   service-two:
     path: service-two
+     dependsOn:
+      - main
