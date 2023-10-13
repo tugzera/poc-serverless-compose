@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "AWS_PROFILE=inspect-test npx serverless deploy --stage dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "serverless": "^3.35.2"
+  },
+  "devDependencies": {
+    "@serverless/compose": "^1.3.0"
   }
 }
