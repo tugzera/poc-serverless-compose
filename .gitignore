@@ -3,3 +3,4 @@ service-one/node_modules
 service-two/node_modules
 main/node_modules
 .serverless
+.env

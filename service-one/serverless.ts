@@ -1,6 +1,13 @@
 import type { AWS } from "@serverless/typescript";
+import "dotenv/config";
 
 import hello from "@functions/hello";
+
+console.log(
+  "AKI",
+  process.env.API_GATEWAY_REST_API_ID,
+  process.env.API_GATEWAY_ROOT_REST_API_ID
+);
 
 const serverlessConfiguration: AWS = {
   service: "service-one",
@@ -12,8 +19,8 @@ const serverlessConfiguration: AWS = {
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
-      restApiId: "mahatnc9cg",
-      restApiRootResourceId: "vcnbhbi7d3",
+      restApiId: process.env.API_GATEWAY_REST_API_ID,
+      restApiRootResourceId: process.env.API_GATEWAY_ROOT_REST_API_ID,
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
